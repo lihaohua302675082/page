@@ -1,8 +1,9 @@
-PyTorch 中有数据集接口 torch.utils.data.Dataset，它们实现了__getitem__ 和 __len__ ，因此构造的实现就是对这个函数的实现。Pytorch中含后大量的自带数据集借口，但在比赛中数据集往往需要自己构造。
+PyTorch 中有数据集接口 torch.utils.data.Dataset，它们实现了____getitem____ 和 __len____ ，因此构造的实现就是对这个函数的实现。Pytorch中含后大量的自带数据集借口，但在比赛中数据集往往需要自己构造。
 
-构建自己的Dataset
+构建自己的Dataset必须对 __init__、__getitem__ 和 __len__ 方法进行重载
 
 ```python
+
 from torch.utils.data.dataset import Dataset
 
 class MyDataset(Dataset):  # 继承Dataset类
